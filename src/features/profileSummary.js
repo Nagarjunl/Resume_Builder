@@ -1,24 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  ProSummary:[]
-  
-}
+  ProSummary: [],
+};
 
 export const profileSummary = createSlice({
   name: "ProfileSummary",
   initialState,
   reducers: {
-  
-    setProSummary: (state, {payload} ) => {
+    setProSummary: (state, { payload }) => {
       state.ProSummary.push(payload);
     },
-    
-  
   },
 });
 
- 
- 
 export const { setProSummary } = profileSummary.actions;
 export default profileSummary.reducer;
